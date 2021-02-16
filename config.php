@@ -120,19 +120,14 @@ class DB{
         echo "</pre>";
     }
 }
-$DB = new DB();
 
+$DB = new DB();
 
 function fatal_handler(){
     global $DB;
-
-    $errfile = "unknown file";
-    $errstr  = "shutdown";
-    $errno   = E_CORE_ERROR;
-    $errline = 0;
-
+    
     $error = error_get_last();
-
+    
     if ($error !== NULL) {
         $DB->dumpData($error);
     }
