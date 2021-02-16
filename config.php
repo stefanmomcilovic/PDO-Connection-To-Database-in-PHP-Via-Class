@@ -6,10 +6,10 @@ class DB{
     public $error_array = array();
     public $con;
 
-    private $dbname = "mysentent_development"; // Database Name
+    private $dbname = ""; // Database Name
     private $host = "localhost"; // Host
-    private $username = "mysentent_dev"; // Database Login username
-    private $password = "Stefko01"; // Database Login Password
+    private $username = ""; // Database Login username
+    private $password = ""; // Database Login Password
 
     function __construct()
     {
