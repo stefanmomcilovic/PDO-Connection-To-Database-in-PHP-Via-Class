@@ -19,6 +19,7 @@ class DB{
             $this->con->setAttribute(PDO::ATTR_EMULATE_PREPARES, true);
             $this->con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
             $this->con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $this->con->setAttribute(PDO::ATTR_EMULATE_PREPARES, TRUE);
             return $this->con;
         } catch (PDOException $e) {
             echo "Connection failed: " . $e->getMessage();
